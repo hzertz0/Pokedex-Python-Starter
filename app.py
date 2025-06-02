@@ -3,4 +3,19 @@ import json
 pokedex = open("./pokedex.json", encoding="utf8")
 ## create variable "data" that represents the enitre pokedex list
 data = json.load(pokedex)
-print(data[0])
+
+"""input = input("Search: ").capitalize()
+
+for pokemon in data:
+    if input in pokemon["name"]["english"]:
+        print(pokemon)"""
+
+"""for pokemon in data:
+    if "Grass" in pokemon["type"] and "Poison" in pokemon["type"]:
+        print(pokemon["name"]["english"])"""
+
+for pokemon in data:
+    if (pokemon["type"][0][:1]) == (pokemon["type"][1][:1]):
+        print(pokemon)
+
+
